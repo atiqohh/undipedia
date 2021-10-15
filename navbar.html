@@ -1,0 +1,56 @@
+<?php
+	if(isset($_POST['submitsearch'])){
+		$search = $_POST['search'];
+		if ($search != ''){
+			header('Location: search.php?search='.$search.'');
+		}
+	}
+?>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+  <div class="header-top">
+    <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+      <div class="container">
+      <div class="row align-items-center">
+        <div class="col-8 col-lg-3 d-flex">
+        <a href="index.php" class="site-logo"><img src="images/logo.png" width="18%"> UNDIPedia</a>
+        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+          class="icon-menu h3"></span></a>
+        </div>
+      <div class="col-8 col-lg-6 d-flex">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+          <li class="active">
+            <a href="index.php" class="nav-link text-left">Home</a>
+          </li>
+          <li>
+            <a href="categories.php?id=1" class="nav-link text-left">Categories</a>
+          </li>
+          <li>
+            <a href="new_post.php" class="nav-link text-left">All-Post</a>
+          </li>
+			<a href="login.php" class="btn btn-secondary">Login</a>
+          </ul>                                                                   
+        </nav>
+      </div>
+      <div class="col-8 col-lg-3 d-flex">
+        <form method="POST" action="" class="search-form d-inline-block">
+          <div class="d-flex">
+          <input type="text" class="form-control" id="search" name="search" placeholder="Search...">
+          <button type="submit" class="btn btn-secondary" name="submitsearch"><span class="icon-search"></span></button>
+          </div>
+        </form>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
