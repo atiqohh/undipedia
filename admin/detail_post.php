@@ -20,7 +20,7 @@
                              echo'<h5 id="nama">'.$row->nama.'</h5>';
                              echo'<img src="data:images/jpg;base64,'.base64_encode($row->file_gambar).'" id="file_gambar">';
                              echo'<p id="isi">'.$row->isi_post.'</p>';
-                             echo'</div>';
+                             print_r'</div>';
                         }
             ?>
           </div>
